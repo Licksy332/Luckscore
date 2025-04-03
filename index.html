@@ -8,7 +8,26 @@
         body {
             text-align: center;
             font-size: 2rem;
-            margin-top: 20%;
+            margin-top: 15%;
+            font-family: Arial, sans-serif;
+        }
+        #message {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        button {
+            font-size: 1.5rem;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
@@ -19,19 +38,19 @@
     <script>
         function showRandomMessage() {
             const messages = [
-                "10% : 오늘은 운이 다소 저조하네요. 중요한 결정을 미루고 조심히 보내세요!.",
+                "10% : 오늘은 운이 다소 저조하네요. 중요한 결정을 미루고 조심히 보내세요!",
                 "20% : 조심스러운 하루가 필요해요. 하지만 작은 행운도 소중하게 여겨보세요!",
-                "30% : 살짝 아쉬운 날이지만 긍정적인 마음이 운을 끌어올릴 수 있어요!.",
+                "30% : 살짝 아쉬운 날이지만 긍정적인 마음이 운을 끌어올릴 수 있어요!",
                 "40% : 평범한 하루지만 노력하면 행운이 따라올지도 몰라요!",
-                "50% : 반반의 확률! 스스로 행운을 만들어 가는 하루가 될 거예요!."
-                "60% : 기분 좋은 하루가 예상돼요! 작은 행운을 놓치지 마세요",
+                "50% : 반반의 확률! 스스로 행운을 만들어 가는 하루가 될 거예요!",
+                "60% : 기분 좋은 하루가 예상돼요! 작은 행운을 놓치지 마세요.",
                 "70% : 운이 따라주는 날! 좋은 기운을 활용해 도전해보세요.",
-                "80% : 오늘은 꽤나 운이 좋은 날! 원하는 일이 잘 풀릴 가능성이 커요",
-                "90% : 대박 행운의 날! 기대하지 않았던 기쁜 소식이 있을지도!.",
-                "100% : 행운의 절정! 뭐든지 시도해도 잘 풀릴 하루예요!",
-                
+                "80% : 오늘은 꽤나 운이 좋은 날! 원하는 일이 잘 풀릴 가능성이 커요.",
+                "90% : 대박 행운의 날! 기대하지 않았던 기쁜 소식이 있을지도!",
+                "100% : 행운의 절정! 뭐든지 시도해도 잘 풀릴 하루예요!"
             ];
-            document.getElementById("message").innerText = messages[Math.floor(Math.random() * messages.length)];
+            const randomIndex = Math.floor(Math.random() * messages.length);
+            document.getElementById("message").innerText = messages[randomIndex];
         }
     </script>
 </body>
